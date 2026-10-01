@@ -5,7 +5,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   auto-nesy-bench is a benchmark for evaluating how well LLMs translate
   natural-language domain knowledge into logical constraints, and how those
   constraints affect downstream Neuro-Symbolic predictors.
-baseurl: "/nesy-auto-bench" # the subpath of your site, e.g. /blog
+baseurl: "/auto-nesy-bench" # the subpath of your site, e.g. /blog
 github_username: samuelebortolotti
 markdown: kramdown
 

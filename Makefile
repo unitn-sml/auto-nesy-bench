@@ -12,7 +12,7 @@ HOST := 127.0.0.1
 ifndef PORT
 PORT := $(shell p=4000; while ss -ltn | grep -q ":$$p "; do p=$$((p+1)); done; echo $$p)
 endif
-BASEURL := /nesy-auto-bench/
+BASEURL := /auto-nesy-bench/
 BUILD := build
 
 # ======= COLORS ===================

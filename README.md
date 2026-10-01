@@ -9,7 +9,7 @@ Website of *auto-nesy-bench: Auto-Formalizing Neuro-Symbolic Predictors*.
 ```bash
 make install   # install the gems in vendor/bundle
 make math      # render the LaTeX in _tools/index.src.md into index.md
-make serve     # serve at http://127.0.0.1:4000/nesy-auto-bench/
+make serve     # serve at http://127.0.0.1:4000/auto-nesy-bench/
 make build     # build into _site
 ```
 
