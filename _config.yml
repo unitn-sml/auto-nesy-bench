@@ -1,0 +1,24 @@
+title: "auto-nesy-bench: Auto-Formalizing Neuro-Symbolic Predictors"
+author: Samuele Bortolotti
+email: samuele.bortolotti@unitn.it
+description: >- # this means to ignore newlines until "baseurl:"
+  auto-nesy-bench is a benchmark for evaluating how well LLMs translate
+  natural-language domain knowledge into logical constraints, and how those
+  constraints affect downstream Neuro-Symbolic predictors.
+baseurl: "/nesy-auto-bench" # the subpath of your site, e.g. /blog
+github_username: samuelebortolotti
+markdown: kramdown
+
+# Build settings
+encoding: UTF-8
+plugins:
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+exclude:
+  - Makefile
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor

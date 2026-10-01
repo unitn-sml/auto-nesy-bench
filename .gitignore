@@ -1,0 +1,26 @@
+# Jekyll build output and caches
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler / Ruby (local install paths and machine-specific config)
+.bundle/
+vendor/
+.ruby-version
+.ruby-lsp/
+
+# Data fetched by download_external_datasets.sh
+data/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editors and OS
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+Thumbs.db
