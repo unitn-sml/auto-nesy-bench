@@ -12,6 +12,11 @@ code_url: "https://github.com/unitn-sml/auto-nesy-bench-code"
 
 {% include header.html %}
 
+<figure class="pipeline">
+  <img src="{{ "/assets/images/pipeline.png" | relative_url }}" alt="the auto-formalization pipeline">
+  <figcaption>Given a natural-language description of a constraint and its variables, an LLM generates a <code>DIMACS</code>, <code>NAT</code>, <code>PySAT</code>, <code>CPMpy</code> or <code>SymPy</code> formalization. Every output is converted to <code>DIMACS</code>, compiled into a circuit, and used by a NeSy predictor, so that its output satisfies the constraint by design. The five boxes show equivalent encodings of (green ∧ clear) ⇒ forward.</figcaption>
+</figure>
+
 # Abstract
 
 Neuro-Symbolic (NeSy) predictors incorporate prior knowledge into the prediction process of neural networks, ensuring that outputs satisfy specified constraints, making them particularly suitable for high-stakes applications where compliance with domain knowledge is essential. A key bottleneck in this paradigm is the acquisition of symbolic constraints: encoding domain knowledge into logical formulas remains a manual and expert-intensive process. In this work, we investigate the extent to which auto-formalization via LLMs can systematically translate textual knowledge into symbolic knowledge that can be plugged into NeSy predictors. To this end, we introduce ``auto-nesy-bench``, a new benchmark for evaluating constraint formalization and its impact on downstream accuracy of NeSy predictors. Through an extensive evaluation across several domains, we find that LLMs can formalize constraints to a meaningful extent, generating formulas that are often similar to those provided by human experts. Moreover, when the generated formulas are syntactically valid, they can lead to high-quality downstream predictions.
@@ -359,12 +364,7 @@ For example, a `permissive` formula with MC-R = 1.75 admits 75% more assignments
 
 <h1><a name="pipeline">Evaluation pipeline</a></h1>
 
-In the paper, we use `auto-nesy-bench` to evaluate an end-to-end pipeline: an LLM formalizes the constraint, and the resulting formula is plugged into a NeSy predictor used for learning and inference.
-
-<figure class="pipeline">
-  <img src="{{ "/assets/images/pipeline.png" | relative_url }}" alt="the auto-formalization pipeline">
-  <figcaption>Given a natural-language description of a constraint and its variables, an LLM generates a <code>DIMACS</code>, <code>NAT</code>, <code>PySAT</code>, <code>CPMpy</code> or <code>SymPy</code> formalization. Every output is converted to <code>DIMACS</code>, compiled into a circuit, and used by a NeSy predictor, so that its output satisfies the constraint by design. The five boxes show equivalent encodings of (green ∧ clear) ⇒ forward.</figcaption>
-</figure>
+In the paper, we use `auto-nesy-bench` to evaluate an end-to-end pipeline: an LLM formalizes the constraint, and the resulting formula is plugged into a NeSy predictor used for learning and inference (see the figure at the top of the page).
 
 <h2>Auto-formalization</h2>
 

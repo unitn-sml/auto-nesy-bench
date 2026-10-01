@@ -7,11 +7,15 @@ description: >-
   constraints affect downstream Neuro-Symbolic predictors.
 # Links not yet available: fill them in once released.
 paper_url: ""
-data_url: ""
-code_url: ""
+code_url: "https://github.com/unitn-sml/auto-nesy-bench-code"
 ---
 
 {% include header.html %}
+
+<figure class="pipeline">
+  <img src="{{ "/assets/images/pipeline.png" | relative_url }}" alt="the auto-formalization pipeline">
+  <figcaption>Given a natural-language description of a constraint and its variables, an LLM generates a <code>DIMACS</code>, <code>NAT</code>, <code>PySAT</code>, <code>CPMpy</code> or <code>SymPy</code> formalization. Every output is converted to <code>DIMACS</code>, compiled into a circuit, and used by a NeSy predictor, so that its output satisfies the constraint by design. The five boxes show equivalent encodings of (green ∧ clear) ⇒ forward.</figcaption>
+</figure>
 
 # Abstract
 
@@ -19,11 +23,9 @@ Neuro-Symbolic (NeSy) predictors incorporate prior knowledge into the prediction
 
 <h1><a name="downloads">Downloads</a></h1>
 
-### **Benchmark data**: {% if page.data_url != "" %}[Download]({{ page.data_url }}){% else %}_coming soon_{% endif %}
-
 ### **Non-redistributable datasets**: [`download_external_datasets.sh`](download_external_datasets.sh) (CIFAR-10, CIFAR-100, SUSHI3)
 
-### **Codebase**: {% if page.code_url != "" %}[GitHub]({{ page.code_url }}){% else %}_not yet released_{% endif %}
+### **Codebase and data**: {% if page.code_url != "" %}[GitHub]({{ page.code_url }}){% else %}_not yet released_{% endif %}
 
 ### **Paper**: {% if page.paper_url != "" %}[Preprint]({{ page.paper_url }}){% else %}_coming soon_{% endif %}
 
@@ -383,12 +385,7 @@ For example, a `permissive` formula with MC-R = 1.75 admits 75% more assignments
 
 <h1><a name="pipeline">Evaluation pipeline</a></h1>
 
-In the paper, we use `auto-nesy-bench` to evaluate an end-to-end pipeline: an LLM formalizes the constraint, and the resulting formula is plugged into a NeSy predictor used for learning and inference.
-
-<figure class="pipeline">
-  <img src="{{ "/assets/images/pipeline.png" | relative_url }}" alt="the auto-formalization pipeline">
-  <figcaption>Given a natural-language description of a constraint and its variables, an LLM generates a <code>DIMACS</code>, <code>NAT</code>, <code>PySAT</code>, <code>CPMpy</code> or <code>SymPy</code> formalization. Every output is converted to <code>DIMACS</code>, compiled into a circuit, and used by a NeSy predictor, so that its output satisfies the constraint by design. The five boxes show equivalent encodings of (green ∧ clear) ⇒ forward.</figcaption>
-</figure>
+In the paper, we use `auto-nesy-bench` to evaluate an end-to-end pipeline: an LLM formalizes the constraint, and the resulting formula is plugged into a NeSy predictor used for learning and inference (see the figure at the top of the page).
 
 <h2>Auto-formalization</h2>
 
@@ -525,5 +522,5 @@ If you use `auto-nesy-bench`, please cite:
 <h1><a name="acknowledgments">Acknowledgments</a></h1>
 
 <span style="font-size:0.8em;">
-We acknowledge the CINECA award under the ISCRA initiative for the availability of high performance computing resources and support. Funded by the European Union, Grant Agreement no. 101120763 (TANGO). Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Health and Digital Executive Agency (HaDEA); neither can be held responsible for them. Antonio Vergari is supported by the "UNREAL: Unified Reasoning Layer for Trustworthy ML" project (EP/Y023838/1), selected by the ERC and funded by UKRI EPSRC. Stefano Teso was partially supported by the Flemish research foundation (FWO) project "Neurosymbolic AI for Constraint Learning" (G047124N).
+Funded by the European Union, Grant Agreement no. 101120763 (TANGO). Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Health and Digital Executive Agency (HaDEA); neither can be held responsible for them. Antonio Vergari is supported by the "UNREAL: Unified Reasoning Layer for Trustworthy ML" project (EP/Y023838/1), selected by the ERC and funded by UKRI EPSRC. Stefano Teso was partially supported by the Flemish research foundation (FWO) project "Neurosymbolic AI for Constraint Learning" (G047124N). Weixin Chen and Han Zhao are partially supported by an NSF grant #2504555.
 </span>
