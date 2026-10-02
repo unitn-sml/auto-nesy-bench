@@ -466,12 +466,14 @@ We evaluate eleven open-weight LLMs, from 8.2B to 117B parameters: `qwen3-8b`, `
 If you use `auto-nesy-bench`, please cite:
 
 ```bibtex
-@misc{bortolotti2026autonesybench,
-  title  = {Auto-Formalizing Neuro-Symbolic Predictors},
-  author = {Bortolotti, Samuele and Chen, Weixin and Zhao, Han and
-            Passerini, Andrea and Teso, Stefano and Vergari, Antonio},
-  year   = {2026},
-  note   = {Preprint}
+@misc{bortolotti2026autoformalizing,
+  title={Auto-Formalizing Neuro-Symbolic Predictors},
+  author={Samuele Bortolotti and Weixin Chen and Han Zhao and Andrea Passerini and Stefano Teso and Antonio Vergari},
+  year={2026},
+  eprint={2610.01519},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2610.01519},
 }
 ```
 
