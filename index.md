@@ -6,7 +6,7 @@ description: >-
   natural-language domain knowledge into logical constraints, and how those
   constraints affect downstream Neuro-Symbolic predictors.
 # Links not yet available: fill them in once released.
-paper_url: ""
+paper_url: "https://arxiv.org/abs/2610.01519"
 code_url: "https://github.com/unitn-sml/auto-nesy-bench-code"
 ---
 
